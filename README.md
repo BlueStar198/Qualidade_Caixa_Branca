@@ -1,6 +1,6 @@
 # Qualidade_Caixa_Branca
 
-#### Erros encontrados
+# Erros encontrados
 
 ## 1. Erro na Configuração do Driver JDBC
    - No método `conectarBD`, a linha `Class.forName("com.mysql.Driver.Manager").newInstance();` está incorreta.
@@ -15,19 +15,19 @@
    - Não há fechamento adequado dos recursos (`Connection`, `Statement`, `ResultSet`), o que pode levar a vazamento de recursos e problemas de desempenho.
 
 
-#### Documentação
+# Documentação
 - Não há documentação no código. 
 
-#### Nomenclatura de Variáveis e Constantes
+## Nomenclatura de Variáveis e Constantes
 - A nomenclatura das variáveis e métodos não está seguindo as convenções Java. Por exemplo, o método `conectarBD` poderia ser renomeado para `conectarBancoDeDados` para seguir um padrão mais claro e descritivo.
 
-#### Legibilidade e Organização
+## Legibilidade e Organização
 - O código precisa de melhorias em termos de legibilidade e organização. A falta de espaçamento entre as linhas e a ausência de quebras de linha dificultam a leitura do código.
 
-#### Tratamento de NullPointerException
+## Tratamento de NullPointerException
 - Não há tratamento explícito para `NullPointerException`.
 
-#### Arquitetura Utilizada
+## Arquitetura Utilizada
 - Não fica claro qual arquitetura está sendo referida aqui.
 
 #### Fechamento de Conexões
