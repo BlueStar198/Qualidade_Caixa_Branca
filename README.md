@@ -1,4 +1,5 @@
 # Qualidade_Caixa_Branca
+#TESTADO EM VISUAL STUDIO CODE
 
 # Erros encontrados
 
