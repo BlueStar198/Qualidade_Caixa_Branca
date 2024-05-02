@@ -43,7 +43,7 @@ O código Java neste repositório é um exemplo simples de uma classe de usuári
 ## Arquitetura Utilizada
 - Não fica claro qual arquitetura está sendo referida aqui.
 
-#### Fechamento de Conexões
+## Fechamento de Conexões
 - O código não fecha adequadamente a conexão com o banco de dados após o uso. Isso pode causar vazamento de recursos e problemas de desempenho.
 
 
