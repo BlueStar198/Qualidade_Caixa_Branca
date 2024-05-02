@@ -32,4 +32,73 @@
 - Não fica claro qual arquitetura está sendo referida aqui.
 
 #### Fechamento de Conexões
-- O código não fecha adequadamente a conexão com o banco de dados após o uso. Isso pode causar vazamento de recursos e problemas de desempenho. 
+- O código não fecha adequadamente a conexão com o banco de dados após o uso. Isso pode causar vazamento de recursos e problemas de desempenho.
+
+
+# Grafo de Fluxo Etapa 3
+![image](https://github.com/BlueStar198/Qualidade_Caixa_Branca/assets/41968462/26eea9e7-33e4-4975-9dd1-d98cf6b1b6c3)
+
+## Numeracao dos pontos do codigo
+
+   //Inicio da classe
+    public class User {
+1:  public Connection conectarBD() {
+2:  Connection conn = null;
+3:  try{
+4:  Class.forName("com.mysql.Driver.Manager").newInstance();
+5:  String url = "jdbc:mysql://127.0.0.1/test?user=lopes&password=123";
+6:  conn = DriverManager.getConnection(url);
+7:  } catch (Exception e) {}
+8:  return conn;}
+9:  public String nome="";
+    public boolean result = false;
+10: public boolean verificarUsuario (String login, String senha) {
+11: String sql = "";
+    Connection conn = conectarBD();
+    //INSTRUÇÃO SQL
+12: sql += "select nome from usuarios ";
+    sql += "where login = " + "'" + login + "'";
+    sql += "  and senha = " + "'" + senha + "';";
+13: try {
+14: Statement st = conn.createStatement();
+    ResultSet rs = st.executeQuery(sql);
+15: if (rs.next()) {
+16: result = true;
+    nome = rs.getString("nome");}
+17: }catch (Exception e) {}
+18: return result; }
+    }
+    //fim da class
+
+## Caminhos
+
+Caminho 1:[1;2;8;10;11;
+           13;16;18]
+
+Caminho 2:[1;2;8;10;13;
+           15;18]
+
+Caminho 3:[1;2;8;10;
+           13;18]
+
+Caminho 4:[1;8;10;18]
+
+Caminho 5:[1;8;10;13;
+           15;16;18]
+
+Caminho 6:[1;8;10;13;
+           15;18]
+
+Caminho 7:[1;8;10;13;18]
+
+Caminho 8:[1;8;10;18]
+
+## Cálculo da complexidade ciclomática
+
+V(G) = 5 REGIÕES.
+V(G) = 21 ARESTAS.
+V(G) = 18 NÓS.
+CÁLCULO: V(G) = (ARESTAS – NÓS) + 2 = 5
+
+
+
