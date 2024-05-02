@@ -1,6 +1,18 @@
 # Qualidade_Caixa_Branca
 # TESTADO EM VISUAL STUDIO CODE
 
+# Teste de Caixa Branca
+
+Este repositório contém um exemplo de código Java para demonstrar o teste de caixa branca.
+
+## O que é Teste de Caixa Branca?
+
+O teste de caixa branca, também conhecido como teste estrutural, é uma técnica de teste de software que se concentra na análise do código-fonte interno de um programa. Em vez de examinar apenas as entradas e saídas esperadas do software, o teste de caixa branca examina a estrutura interna do código para garantir que todas as instruções sejam executadas corretamente e que todos os caminhos possíveis sejam testados.
+
+## Sobre o Exemplo de Código
+
+O código Java neste repositório é um exemplo simples de uma classe de usuário que realiza operações de autenticação em um banco de dados. O método `verificarUsuario` é responsável por verificar se um determinado usuário e senha correspondem a uma entrada no banco de dados.
+
 # Erros encontrados
 
 ## 1. Erro na Configuração do Driver JDBC
